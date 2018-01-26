@@ -1,6 +1,6 @@
 <?php
 /*
- php.ini:
+ required in php.ini:
    always_populate_raw_post_data = On
   
 */
