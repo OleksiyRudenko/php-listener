@@ -9,3 +9,5 @@ root/images/
 root/style.css
 settings/
 !settings/php.ini
+root/post-files/
+!root/post-files/.gitkeep
