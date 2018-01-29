@@ -8,11 +8,7 @@ include_once('../php-listener/time-tz-reset.php');
 include_once('../php-listener/db-connect.php');
 include_once('../php-listener/db-select.php');
 
- 
- // =============== TO DO ==============================
-
 $request_time = explode('.',$_SERVER['REQUEST_TIME_FLOAT']); // [unixtime,msec]
-
 $timestamp = date("Y-m-d H:i:s",$request_time[0]) . '.' . $request_time[1];
 
 $headers = json_encode(apache_request_headers(),JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
@@ -39,6 +35,28 @@ if (!$result = $dbconnection->query($query)) {
 } else {?>
 	<h3 style="color: Green">Request stored successfully</h3>
 <?php
+}
+
+
+// save multiparts as files
+$uploads_dir = './post-files';
+foreach ($_FILES as $key => $fileprops) {
+  if ($fileprops['error'] == UPLOAD_ERR_OK) {
+    $tmp_name = $fileprops['tmp_name'];
+    $name = basename($fileprops['name']);
+
+    /* $query = "INSERT INTO `$tbname` "
+     . "(ts,headers,payload)"
+     . "VALUES"
+     . "("
+     . "'".$timestamp."',"
+     . "'".$dbconnection->real_escape_string($tmp_name)."',"
+     . "'".$dbconnection->real_escape_string("$uploads_dir/$name")."'"
+     . ")";
+    $dbconnection->query($query); */
+
+    move_uploaded_file($tmp_name, "$uploads_dir/$name");
+  }
 }
 
 $dbconnection->close();
