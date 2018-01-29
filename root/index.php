@@ -23,8 +23,8 @@
 		  border: 1px solid Gray;
 		  border-radius: 5px;
 		  width: 90%;
-		  height: 200%;
-		  max-height: 400%;
+		  height: 200vh;
+		  max-height: 400vh;
 		  overflow: auto;
 	  }
 	</style>
