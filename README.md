@@ -44,6 +44,7 @@ Mapping rules:
  * `php.ini`: set `always_populate_raw_post_data` property to `On`
 
 Grant Apache and MySQL whatever permissions your OS requires.
+![Permissions under Windows](img/screenshot-permissions.png)
 
 Launch the web server.
 
