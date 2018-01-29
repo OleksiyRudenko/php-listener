@@ -9,7 +9,7 @@ include_once('../php-listener/db-connect.php');
 include_once('../php-listener/db-select.php');
 
 $request_time = explode('.',$_SERVER['REQUEST_TIME_FLOAT']); // [unixtime,msec]
-$timestamp = date("Y-m-d H:i:s",$request_time[0]) . '.' . $request_time[1];
+$timestamp = date("Y-m-d H:i:s",$request_time[0]) . '.' . (($request_time[1])?$request_time[1]:0);
 
 $headers = json_encode(apache_request_headers(),JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
