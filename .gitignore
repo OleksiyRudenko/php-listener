@@ -1,0 +1,11 @@
+usbwebserver.exe
+UsbWebServer-8-manual.pdf
+apache2/
+lang/
+mysql/
+php/
+phpmyadmin/
+root/images/
+root/style.css
+settings/
+!settings/php.ini
