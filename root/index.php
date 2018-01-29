@@ -7,9 +7,17 @@
     if (array_key_exists('db',$_GET) && $_GET['db'] === 'purge')
 	   $purgedb = TRUE;
 
-?><html>
+?><!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
 	<title>Simple HTTP POST listener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Overpass%20Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/OleksiyRudenko/normalize.css/28e3dc36/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/OleksiyRudenko/default-beauty.css/482728bd/default-beauty.css">
 	<style>
 	  #monitor {
 		  border: 1px solid Gray;

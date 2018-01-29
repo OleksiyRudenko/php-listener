@@ -1,8 +1,15 @@
 <?php
 	include_once('../php-listener/time-tz-reset.php');
-?><html>
-<head>
-	<title>Simple HTTP POST listener</title>
+?><!DOCTYPE html>
+  <html lang="en">
+	<meta charset="UTF-8">
+    <title>Simple HTTP POST listener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Overpass%20Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/OleksiyRudenko/normalize.css/28e3dc36/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/OleksiyRudenko/default-beauty.css/482728bd/default-beauty.css">
 	<style>
 	  .entry {
 		  margin-bottom: 1em;
