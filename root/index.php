@@ -36,11 +36,13 @@
 	include_once('../php-listener/db-connect.php');
 	include_once('../php-listener/db-create.php');
 	if ($purgedb) include_once('../php-listener/db-purge.php');
+	$server_address = $_SERVER['SERVER_ADDR'];
+	if (strlen($server_address)<7) $server_address = 'localhost';
 	?>
 	<p>Requests are listened at URL 
 	   <input id="url-src" type="text" size="48" 
 	   onchange="handleUrlChange()"
-	   value="<?=$_SERVER['REQUEST_SCHEME']?>://<?=$_SERVER['SERVER_ADDR']?>:<?=$_SERVER['SERVER_PORT']?>/listener.php"
+	   value="<?=$_SERVER['REQUEST_SCHEME']?>://<?=$server_address?>:<?=$_SERVER['SERVER_PORT']?>/listener.php"
 	   />
 	</p>
 	<p>NB! If IP address is missing in URL above, please, re-access this service using IP address of the computer that hosts

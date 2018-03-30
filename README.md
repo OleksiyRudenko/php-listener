@@ -43,13 +43,14 @@ Mapping rules:
  * `php-listener/` should be located at the same level as the doc root folder
  * `php.ini`: set `always_populate_raw_post_data` property to `On`
 
+Launch the web server (e.g. run `usbwebserver.exe`).
+
 Grant Apache and MySQL whatever permissions your OS requires.
 ![Permissions under Windows](img/screenshot-permissions.png)
 
-Launch the web server.
-
 Navigate to [localhost](localhost), [localhost:8080](localhost:8080) or other
-port as your web server instance requires.
+port as your web server instance requires (e.g. click `Localhost` button in
+UsbWebServer UI).
 
 You will want to see the following:
 
