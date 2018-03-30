@@ -76,7 +76,7 @@ use it to send requests.
 
 Watch requests as they arrive from senders.
 
-Note that multi-part POST request parts are stored to files and log
-contains files information rather than part contents. 
+Note that multi-part POST request parts are stored to files under `./root/post-files/`
+and on-screen log contains files information rather than parts' content. 
 
 [TOC :arrow_double_up: ](#table-of-contents)
